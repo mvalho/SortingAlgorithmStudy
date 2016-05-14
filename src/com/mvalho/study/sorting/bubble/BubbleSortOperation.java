@@ -14,7 +14,7 @@ public class BubbleSortOperation implements Sort {
 		for (int i = 0; i < arrayToSort.length; i++) {
 			
 			/*
-			 * the range for the bellow loop is dinamic, it means, every loop it decrease the range for the loop
+			 * the range for the bellow loop is dynamic, it means, every loop it decrease the range for the loop
 			 */
 			for (int j = 0; j < arrayToSort.length - i - 1; j++) { 
 				
