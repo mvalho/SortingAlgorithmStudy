@@ -2,14 +2,13 @@ package com.mvalho.study.sorting.main;
 
 import com.mvalho.study.sorting.bubble.BubbleSortOperation;
 import com.mvalho.study.sorting.insertion.InsertionSortOperation;
+import com.mvalho.study.sorting.quick.QuickSortOperation;
 import com.mvalho.study.sorting.selection.SelectionSortOperation;
 
 public class SortExecution {
 
-	private static final int[] ARRAY_TO_SORT = {18,8,7,2,11,0,1,4,20,10,17,13,12,19,14,16,15,3,5,9};
-
 	public static void main(String[] args) {
-		int[] arrayToSort = ARRAY_TO_SORT;
+		int[] arrayToSort = {18,8,7,2,11,0,1,4,20,10,17,13,12,19,6,14,4,16,15,3,5,9};
 		System.out.println("Array to be sorted out: " + printArray(arrayToSort));
 		
 		/*
@@ -21,16 +20,23 @@ public class SortExecution {
 		/*
 		 * INSERTION SORT
 		 */
-		int[] arrayToSort2 = ARRAY_TO_SORT;
+		int[] arrayToSort2 = {18,8,7,2,11,0,1,4,20,10,17,13,12,19,6,14,4,16,15,3,5,9};
 		InsertionSortOperation insertionSort = new InsertionSortOperation();
 		System.out.println( "Array sorted by Insertion Sort: " + printArray( insertionSort.sortArray(arrayToSort2) ) );
 		
 		/*
 		 * SELECTION SORT
 		 */
-		int[] arrayToSort3 = ARRAY_TO_SORT;
+		int[] arrayToSort3 = {18,8,7,2,11,0,1,4,20,10,17,13,12,19,6,14,4,16,15,3,5,9};
 		SelectionSortOperation selectionSort = new SelectionSortOperation();
 		System.out.println("Array sorted by Selection Sort: " + printArray( selectionSort.sortArray(arrayToSort3) ));
+		
+		/*
+		 * QUICK SORT
+		 */
+		int[] arrayToSort4 = {18,8,7,2,11,0,1,4,20,10,17,13,12,5,5,19,6,14,4,16,15,3,5,9};
+		QuickSortOperation quickSort = new QuickSortOperation();
+		System.out.println("Array sorted by Quick Sort: " + printArray( quickSort.sortArray(arrayToSort4) ) );
 	}
 	
 	/*
